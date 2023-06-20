@@ -23,7 +23,6 @@
 #include <stdint.h>
 #include <QWidget>
 #include <QButtonGroup>
-#include <QSerialPort>
 #include <QList>
 #include <QSettings>
 #include <QtGlobal>
@@ -42,7 +41,7 @@ class DataFormatPanel : public QWidget
     Q_OBJECT
 
 public:
-    explicit DataFormatPanel(QSerialPort* port, QWidget* parent = 0);
+    explicit DataFormatPanel(QWidget* parent = 0);
     ~DataFormatPanel();
 
     /// Returns currently selected number of channels
@@ -80,11 +79,6 @@ private:
 
     bool paused;
     uint64_t _bytesRead;
-
-    DemoReader demoReader;
-    AbstractReader* readerBeforeDemo;
-
-    bool isDemoEnabled() const;
 };
 
 #endif // DATAFORMATPANEL_H

@@ -26,19 +26,16 @@
 #include "utils.h"
 #include "setting_defines.h"
 
-DataFormatPanel::DataFormatPanel(QSerialPort* port, QWidget *parent) :
+DataFormatPanel::DataFormatPanel(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::DataFormatPanel),
-    bsReader(port, this),
-    asciiReader(port, this),
-    framedReader(port, this),
-    demoReader(port, this)
+    bsReader(this),
+    asciiReader(this),
+    framedReader(this)
 {
     ui->setupUi(this);
 
-    serialPort = port;
     paused = false;
-    readerBeforeDemo = nullptr;
     _bytesRead = 0;
 
     // initalize default reader

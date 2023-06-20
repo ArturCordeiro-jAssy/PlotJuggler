@@ -25,6 +25,8 @@ add_library(ParserRaw SHARED
     framedreadersettings.cpp
     numberformat.cpp
     numberformatbox.cpp
+    raw_factory.cpp
+    raw_parser.cpp
     ${UI_SRC}  )
 
 target_link_libraries(ParserRaw
