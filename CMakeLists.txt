@@ -280,7 +280,7 @@ add_subdirectory( plotjuggler_plugins/ToolboxLuaEditor )
 add_subdirectory( plotjuggler_plugins/ParserProtobuf )
 add_subdirectory( plotjuggler_plugins/ParserROS )
 add_subdirectory( plotjuggler_plugins/ParserDataTamer )
-
+add_subdirectory( plotjuggler_plugins/ParserRaw )
 add_subdirectory( plotjuggler_plugins/PluginsZcm )
 
 # Install targets
